@@ -1,0 +1,12 @@
+version: "3.9"
+services:
+  app:
+    build:
+      context: .
+    volumes:
+      - ./src:/app/src
+    env_file:
+      - .env
+    ports:
+      - "5000:5000"
+    command: ["python", "src/main.py"]

@@ -1,0 +1,24 @@
+{
+    "layout": "splith",
+    "nodes": [
+      {
+        "type": "con",
+        "percent": 0.5,
+        "swallows": [{"class": "^Code$"}]
+      },
+      {
+        "layout": "splitv",
+        "percent": 0.5,
+        "nodes": [
+          {
+            "swallows": [{"class": "^kitty$"}],
+            "percent": 0.3
+          },
+          {
+            "swallows": [{"class": "^Microsoft-edge$"}],
+            "percent": 0.7
+          }
+        ]
+      }
+    ]
+  }

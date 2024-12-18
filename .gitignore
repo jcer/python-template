@@ -1,0 +1,16 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*.pyo
+
+# Virtual environment
+env/
+venv/
+
+# Docker files
+*.env
+*.log
+*.pid
+
+# System files
+.DS_Store
