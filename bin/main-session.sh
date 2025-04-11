@@ -20,11 +20,11 @@ if ! tmux has-session -t "$session_name" 2>/dev/null; then
     tmux new-session -d -s "$session_name" -c "$rootdir"
 
     # Rename the first window for main terminal work
-    main_window_name="  "
+    main_window_name="🚦"
     tmux rename-window -t "$session_name:0" "$main_window_name"
 
     # Create a second window for settings or configuration tasks
-    settings_window_name="  "
+    settings_window_name="🌀"
     tmux new-window -d -t "$session_name" -n "$settings_window_name" -c "$rootdir"
 
     # Select the main window as the active one upon attaching

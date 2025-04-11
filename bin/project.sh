@@ -25,14 +25,13 @@ sleep 2
 
 # Define URLs to open
 urls=(
-    'https://claude.ai'
     'https://chatgpt.com'
     'https://github.com'
 )
 
 # Open the first URL in a new window
 if command -v microsoft-edge &>/dev/null; then
-    microsoft-edge --profile-directory='Default' --new-window "${urls[0]}" &>/dev/null &
+    firefox -P waye --new-window "${urls[0]}" &>/dev/null &
 else
     echo "Microsoft Edge is not installed."
     exit 1
@@ -43,7 +42,7 @@ sleep 2
 
 # Open the remaining URLs in the same window
 for url in "${urls[@]:1}"; do
-    microsoft-edge --profile-directory='Default' "$url" &>/dev/null &
+    firefox -P waye "$url" &>/dev/null &
 done
 
 sleep 1
@@ -52,7 +51,7 @@ i3-msg "workspace 5"
 
 # Start main development session in Kitty terminal
 if command -v kitty &>/dev/null; then
-    kitty --name "editor" --override font_size=10 "$scriptdir/main-session.sh" &>/dev/null &
+    kitty --name "editor" --override font_size=12 "$scriptdir/main-session.sh" &>/dev/null &
 else
     echo "Kitty terminal is not installed."
     exit 1
