@@ -13,13 +13,7 @@ i3-msg "workspace 4"
 # Uncomment the line below to load the i3 layout
 # i3-msg "append_layout $rootdir/bin/ws-primary.json"
 
-# Open project in Visual Studio Code
-if command -v code &>/dev/null; then
-    code "$rootdir"
-else
-    echo "Visual Studio Code (code) is not installed."
-    exit 1
-fi
+editor.sh "$rootdir"
 
 sleep 2
 
@@ -30,19 +24,14 @@ urls=(
 )
 
 # Open the first URL in a new window
-if command -v microsoft-edge &>/dev/null; then
-    firefox -P waye --new-window "${urls[0]}" &>/dev/null &
-else
-    echo "Microsoft Edge is not installed."
-    exit 1
-fi
+browser.sh waye --new-window "${urls[0]}" &>/dev/null &
 
 # Wait for the first window to open
 sleep 2
 
 # Open the remaining URLs in the same window
 for url in "${urls[@]:1}"; do
-    firefox -P waye "$url" &>/dev/null &
+    browser.sh waye "$url" &>/dev/null &
 done
 
 sleep 1
