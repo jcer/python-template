@@ -1,6 +1,3 @@
-Här är ett utkast till en `copilot-instructions.md`-fil som du kan använda för ett generellt Python-projekt som körs i Docker. Den använder GitHub Copilots nya anpassningsmöjligheter enligt [den officiella dokumentationen](https://code.visualstudio.com/docs/copilot/copilot-customization).
-
-````markdown
 # copilot-instructions.md
 
 ## Project context
@@ -61,8 +58,3 @@ This is a general-purpose Python project that is developed and executed in a Doc
 * When completing a partial function or method, complete the entire block
 * Prefer multi-line suggestions when clarity benefits
 * Avoid abbreviations or non-standard naming unless required by context
-
-```
-
-Vill du även inkludera exempel på hur man kör kommandon i Docker, eller särskilda konventioner för `Makefile`-användning?
-```
